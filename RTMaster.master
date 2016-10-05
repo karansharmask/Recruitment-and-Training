@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="RTMaster.master.cs" Inherits="RTMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Recruitment And Training</title>
+    <link href="RT_style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="RT_header_wrapper">
+        <div id="RT_header">
+            <div id="site_title">
+                <a href="IndexChild.aspx">
+                    <img src="images/RT_logo.png" alt="LOGO" /></a>
+            </div>
+            <!-- end of site_title -->
+            <div id="header_right">
+                <div id="RT_menu">
+                    <ul>
+                        <li><a href="IndexChild.aspx">Home</a></li>
+                        <li><a href="AboutChild.aspx">About Us</a></li>
+                        <li><a href="ServiceChild.aspx">Services</a></li>
+                        <li><a href="Login.aspx">Login</a></li>
+                        <li><a href="ContactChild.aspx">Contact</a></li>
+                    </ul>
+                    <div class="cleaner">
+                    </div>
+                </div>
+                <!-- end of RT_menu -->
+                <div class="cleaner">
+                </div>
+               <asp:Label ID="lbl_user_name" runat="server" Font-Bold="True" Font-Size="Medium"></asp:Label> 
+            </div>
+            
+            <div class="cleaner">
+            </div>
+        </div>
+        <!-- end of RT_header -->
+    </div>
+    <!-- end of header_wrapper -->
+   <div class ="main_container">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </div>
+    <div id="RT_footer_wrapper_one">
+        <div id="RT_footer_wrapper_two">
+            <div id="RT_footer">
+                &copy;Image Software Consultancy<sub style="float: right; font-size: small">Designed
+                    By Karan Sharma & Vimal Patel</sub>
+            </div>
+            <!-- end of footer -->
+        </div>
+        <!-- end of footer_wrapper -->
+    </div>
+    <!-- end of footer_wrapper -->
+    </form>
+</body>
+</html>

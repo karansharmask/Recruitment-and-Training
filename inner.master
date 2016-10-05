@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="inner.master.cs" Inherits="inner" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Recruitment And Training</title>
+    <link href="RT_style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="RT_header_wrapper">
+        <div id="RT_header">
+            <div id="site_title">
+                <a href="IndexChild.aspx">
+                    <img src="images/RT_logo.png" alt="LOGO" /></a>
+            </div>
+            <!-- end of site_title -->
+             <div id="header_right">
+                <div id="RT_menu">
+                   <div id="Div1">
+                
+                   
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                            <DynamicMenuItemStyle BackColor="#9A3A07" 
+                                BorderStyle="None" Font-Bold="True" Font-Overline="False" Font-Size="10pt" 
+                                ForeColor="Black" Width="100%" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/IndexChild.aspx" Text="Home" Value="Home">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Forms" Value="Forms">
+                                    <asp:MenuItem Text="Applicant Registration" Value="New Item" 
+                                        NavigateUrl="~/ApplicantsMaster.aspx">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Add Department" Value="Add Department" 
+                                        NavigateUrl="~/Department_master.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Add Designation" Value="Add Designation" 
+                                        NavigateUrl="~/DesigntionMaster.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Employees Registration" Value="Employees Registration" 
+                                        NavigateUrl="~/EmployeesMaster.aspx">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Add Jobs" Value="Add Jobs" NavigateUrl="~/jobsMaster.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Add Training" Value="Add Training" 
+                                        NavigateUrl="~/TrainingMaster.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AboutChild.aspx" Text="About Us   " 
+                                    Value="About Us">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ContactChild.aspx" Text="Contact" Value="New Item">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/logout.aspx" Text="Log Out" Value="New Item">
+                                </asp:MenuItem>
+                            </Items>
+                             <StaticMenuItemStyle Font-Bold="True" 
+                                Font-Size="13.5pt" VerticalPadding="15px" Font-Italic="False" 
+                                Font-Names="Monotype Corsiva" />
+                        </asp:Menu>
+               
+              
+            </div>
+                    <div class="cleaner">
+                    </div>
+                </div>
+                <!-- end of RT_menu -->
+                <div class="cleaner">
+                </div>
+               <asp:Label ID="lbl_user_name" runat="server" Font-Bold="True" Font-Size="Medium"></asp:Label> 
+            </div>
+                </div>
+                <!-- end of RT_menu -->
+            
+        </div>
+        <!-- end of RT_header -->
+    </div>
+    <!-- end of header_wrapper -->
+   
+                
+    <div class ="main_container">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </div>
+    <div id="RT_footer_wrapper_one">
+        <div id="RT_footer_wrapper_two">
+            <div id="RT_footer">
+                &copy;Image Software Consultancy<sub style="float: right; font-size: small">Designed
+                    By Karan Sharma & Vimal Patel</sub>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
